@@ -1,0 +1,90 @@
+<html>
+
+<!-- Mirrored from gryffinaero.com/models/ffpages/tips/euler/euler.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 May 2025 15:41:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<TITLE>Balsa Stiffness</TITLE>
+</head>
+<body bgcolor=white>
+<!-- IMG SRC="/cgi-bin/Count2?uname=thayer|num=124305|show=F" -->
+<h2 align = center>Euler Buckling Method for Calculating 
+<br>Youngs Modulus and Stiffness Coefficient</h2>
+<h3 align = center>by Bernard Hunt</h3>
+<p><hr size=2 width="75%">
+<p>In late January of 1998 Bernard Hunt offered an interesting method of extracting the finest wood from your local hobby shop.  His thoughts, and method, are posted here, so that we might all build more successful models.
+<P>
+Also included are <a href = euler2.html>comments from Dan O'Grady</a>, as well as <a href = euler3.html>concerns for accuracy</a> as they offer additional insight into the dedication of modelers to find premium supplies.  Finally, we have a couple of  <A HREF="#download">programs you can download for Macintosh and PC</A>.
+<p><hr size=2 width="50%">
+<p>BH - I am addicted to buying wood for my indoor models from our local model shop. I have bought hundreds of sheets over the years. 
+
+<p>I am afraid it is not enough simply to weigh it and calculate the density as most of it is has poor mechanical properties. I now test the wood for Youngs modulus right there in the shop and only take the stuff that has the right density and stiffness. There are several ways of measuring wood stiffness but the one I prefer uses Euler buckling and only takes a few seconds if you have a programmable pocket computer to calculate the results. With this method, you hold the sheet vertically on a digital kitchen scale and then press on the top end until the sheet buckles sideways - you calculate the properties of the wood from its dimensions, weight and the buckling load. I have published the method in several newsletters but I could try and put it on a web page so internet folks can access it. The best wood selected by this method is more than 30% stiffer than your average wood from IMS, model shops or wherever and this makes a fantastic difference to EZB sticks and my unbraced F1D wing spars. 
+
+<p>The test method and calculation is described very briefly below. If you have a good digital kitchen scales which weighs to greater than 2kg (5lb) max load you can test 1/8" and 3/16" x 3" x 36" wood easily and soft 1/4" at a pinch. 4" wide sheets thicker than 1/8" are better split in two for testing. Some scales are accurate enough for weighing the wood and measuring the buckling loads but you may have to use a separate smaller scales for the weighing. The best results for indoor stock is obtained by cutting the wood down to 1/8" x 1/4" x 18" pieces which avoids the big density variations of sheets and is a handy size for stripping or sanding to spars or sticks. The really great wood for indoor use is 5-6lb density with a stiffness coefficient of about 130. This stuff is stiff and tough but rare.
+<br><a href="mailto:106561.647@compuserve.com">Bernie Hunt (Yorkshire England)</a>
+
+<p><hr size=2 width="75%">
+
+<h4 align = center>Euler Buckling Method for Calculating
+<br>Youngs Modulus and Stiffness Coefficient by Bernard Hunt
+<br>Based on method by Hewitt Philips published in SAM86 Speaks.</h4>
+
+<p>When a slender sheet or strip of balsa is loaded on its end then it 'does not deflect until the load reaches a critical value' known as Euler's Buckling Load.
+
+<p>Beyond this point the sheet buckles laterally and its length shortens 'whilst the load remains constant.'
+
+<p>For sheets of balsa load may differ from one direction to the other so measure the load both ways and use the average.  This can be done by holding a sheet vertically on a kitchen scales and then pressing on the end until the sheet buckles and noting the reading.
+
+<p>The formula for the buckling load is ...
+<br>buckling load = pi^2*e*bb*bd^3/(12*bl^2)
+<br>pi^2=9.87 
+<br>e = youngs modulus of elasticity.
+
+<p>So we can calculate youngs modulus from the buckling load and the sheet dimensions if ...
+<br>bb= balsa breath (width)
+<br>bd= balsa depth (thickness)
+<br>bl= balsa length in inches
+<br>and load and balsa sheet weight (bw) in grams 
+<br>the formula becomes
+<br>youngs modulus e= 0.188*bl^2*(load-bw)/(bb*bd^3) in gcm^-2
+
+<p>we can also calculate density and stiffness coefficient.
+<br>stiffness coefficient, SC, tells how good your wood is compared to average.
+<p>density = 3.8*bw/(bl*bb*bd) in lb/cuft
+<br>SC = e *2500/(density^2*13000000)
+<br>An SC <90 is poor, 90-100 is average, 110 is good and >120 is super.
+
+<p>A listing for a simple basic program to do calculations follows below.  This can also easily be adopted to your favorite spreadsheet.
+
+<p>input "load (grams) ="; load
+<br>input "balsa length (inches)="; bl
+<br>input "balsa breadth (inches)="; bb
+<br>input "balsa depth (inches)="; bd
+<br>input "balsa weight (grams)="; bw
+<br>e = 0.188 * bl ^ 2 * (load - bw) / (bb * bd ^ 3) 
+<br>density = 3.8 * bw / (bl * bd * bb)
+<br>sc = e * 2500 / (density ^ 2 * 13000000) 
+<br>print "load ="; load
+<br>print "balsa length ="; bl
+<br>print "balsa breadth ="; bb
+<br>print "balsa depth ="; bd
+<br>print "balsa weight ="; bw
+<br>print "density ="; .01 * int(100 * density) 
+<br>print "youngs mod ="; .1 * int(.00001 * e); "x 10^6 gcm^-2 or approx "; 1420 * int(.00001 * e); " psi"
+<br>print "stiff coefft ="; cint(sc); " (<90 =poor,90-100 =average, 110 = good, 120 =super)"
+<br>stop
+<a name="download"></a>
+<p><hr size=2 width="75%">
+<H3 align = center>Download an application</H3>
+<p>If you are as lazy as most of us, you can take advantage of the industry of a couple <A HREF="../../ffml%20info/ffml.html">FFML</A> members.  Please be sure to read Bernard Hunt's article, as well as the comments and concerns, so as to fully appreciate how these efforts will result in better models.
+<P align=center><b>Download</a></b>
+<P align=center> <A HREF="bsc.sit">Dave Johnson's stand alone application for the Macintosh</A> 
+<P align=center><A HREF="eulerzip.html">A DOS exe file for PC's from Martin Gregorie</A>
+
+<p><hr size=2 width=50%>
+<p align = center><a href = euler2.html>comments from Dan O'Grady</a> | <a href = euler3.html>concerns for accuracy</a>
+<p align = center><a href=../tips.html>return to Tips Index</a>
+<p><hr size=2 width="25%">
+</body>
+
+<!-- Mirrored from gryffinaero.com/models/ffpages/tips/euler/euler.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 May 2025 15:41:43 GMT -->
+</html>

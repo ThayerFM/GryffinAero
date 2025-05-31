@@ -1,0 +1,47 @@
+<html>
+
+<!-- Mirrored from gryffinaero.com/models/ffpages/tips/euler/euler3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 May 2025 15:43:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<TITLE>Balsa Stiffness - Accuracy</TITLE>
+</head>
+<body bgcolor=white>
+<!-- IMG SRC="/cgi-bin/Count2?uname=thayer|num=126305|show=F" -->
+<h2 align = center>Concerns for Accuracy</h2>
+<p><hr size=2 width="75%">
+
+<p>Martin Gregorie reveals some interesting observations on the Euler Method, with response from Bernard Hunt.
+
+<p>MG - In working the numbers in both inches and mm I discovered that the stiffness calculation is quite sensitive to sheet thickness - a difference of 0.0041of an inch in the thickness of a 3/32 (0.09375) sheet changes the calculated Stiffness Coefficient by 4. You can get the same change in SC if you have a half inch difference in sheet length (when I measured the sheet I found it is 36.5" long) or a 4mm (3/16) difference in width.
+
+<p>The 0.0041" (0.105 mm) thickness change is the difference between assuming the sheet is 3/32" and assuming it is 2.5mm - both are thicknesses stamped on a sheet of wood depending on whether the wood comes from the US or the rest of the world.
+
+<p>These differences correspond to  errors of 1.4% in length, 5% in width and 4.4% in thickness for my sheet.
+
+<p>Now, I can easily weigh balsa to +/- 0.05g (I have a twin pan chemical balance that will weigh to 10 mg - this error corresponds to weighing to the nearest  0.1g) and measure the buckling force to +/- 5 g using a cheap 1 Kg postal letter scale. Similarly, any metal tape measure will easily measure sheet length and width to  +/- 0.5 mm. Nothing short of a vernier calliper can measure sheet thickness to even 0.1 mm and you need a micrometer to do better.
+
+<p>The error bars here are 0.16% balsa weight error (+/- 0.05g in 30g), 0.85% buckling load (+/- 5g in 590g), 0.7% and 0.05% width and length errors (+/- 0.5 mm for a 3" by 36" sheet of balsa), but an error of 0.1mm in the thickness of a 2.5 mm sheet is a whopping 4%.
+
+<p>The moral in this message is that if you are intending to use this balsa comparison method - and it looks like a good one to use - you'd better not believe the thickness written on the sheet. In fact you'd best rush out and buy a vernier calliper or a micrometer if you haven't got one yet because nothing else will give you a good enough grip on actual sheet thickness.
+
+<br><a href=mailto:Gregorie@logica.com>Martin Gregorie - Harlow, UK</a>
+
+<p>BH - You are dead right, you need to measure the dimensions of the sheet accurately to get an accurate answer for the stiffness coefficient. The really critical dimension is the length of the sheet because SC is proportional to it to the fourth power.  Fortunately it is the easiest to measure accurately.   In the model shop, I do the rough sorting assuming the marked dimensions are right but then recheck the actual dimensions of apparent high stiffness coefficient sheets and recalculate the results before actually buying.  Please bear in mind that in one session I sort through a couple of hundred sheets by eye / weight for density (I have a table of sheet size and weight versus density) and then rough test 10-20 for stiffness and finally retest and only buy a handful at most.
+
+<p>Another interesting characteristic of wood is that the maximum stiffness coefficient occurs at 4-5lb density and then it drops off at about 8% per lb density above that.  So any wood above 8lb density with SC = 100 is great wood as the average is only 75.  As experienced modellers know, low density wood is stiff but high density wood is tough.  As I said previously the really great sheets have a density of 5-6lb and SC of 120 plus.
+
+<p>Another interesting fact is that most of the balsa wood we see in England now comes from plantations in Papua New Guinea.  Up until 2 years ago this source was producing some great wood but over the last 18 months it has been terrible( typical SC=80 for 5lb).  The only decent stuff I found recently was Solarbo wood, presumably from Equador.  Another disaster to put down to El Nino! 
+
+<br><a href="mailto:106561.647@compuserve.com">Bernie Hunt (Yorkshire England)</a>
+
+<p><hr size=2 width="75%">
+
+<p align = center><a href = euler.html>Euler Method Page</a> | <a href = euler2.html>comments from Dan O'Grady</a>
+
+<p align = center><a href=../tips.html>return to Tips Index</a>
+<p><hr size=2 width="25%">
+
+</body>
+
+<!-- Mirrored from gryffinaero.com/models/ffpages/tips/euler/euler3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 May 2025 15:43:46 GMT -->
+</html> 
