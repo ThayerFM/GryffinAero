@@ -1,0 +1,18 @@
+From: [name]<[email]>
+To: thayer@gryffinaero.com
+Subject: postal times
+
+
+[new]
+
+<tr>
+<td align=center>#</td>
+<td align=center><A HREF="mailto:[email]">[pilot]</A></td>
+<td align=center>[times]</td>
+<td align=center>[date]</td>
+<td align=center>[site], [ceiling]</td>
+</tr>
+
+Notes:
+<pr>
+[model]

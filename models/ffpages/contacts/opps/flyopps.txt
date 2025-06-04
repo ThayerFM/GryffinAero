@@ -1,0 +1,11 @@
+From: [contact]<[email]>
+To: thayer@gryffinaero.com
+Subject: indoor flying data
+
+<p>
+[city] [state]
+<br>[date], [times]
+<br>[event]
+<br>[site]
+<br><A HREF="mailto:[email]">[contact] at [email]</a> or [phone]
+<br>[notes]
